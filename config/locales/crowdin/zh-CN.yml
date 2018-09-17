@@ -35,8 +35,8 @@ zh-CN:
     label_one_time_password: '一次性密码'
     label_2fa_enabled: '双重身份验证已激活'
     label_2fa_disabled: '双重身份验证未激活'
-    text_otp_delivery_message_sms: "Your %{app_title} one-time password is %{token}"
-    text_otp_delivery_message_voice: "Your %{app_title} one-time password is: %{pause} %{token}. %{pause} I repeat: %{pause} %{token}"
+    text_otp_delivery_message_sms: "您的 %{app_title} 一次性密码为 %{token}"
+    text_otp_delivery_message_voice: "您的 %{app_title} 一次性密码为 %{pause} %{token}。%{pause} I 重复：%{pause} %{token}"
     text_enter_2fa: '请从您的设备输入一次性密码。'
     text_2fa_enabled: '每次登录时，系统将要求您从默认的 2FA 设备输入 OTP 令牌。'
     text_2fa_disabled: '要启用双重身份验证，请使用上面的按钮注册新的 2FA 设备。如果您已拥有设备，则需要将其设置为默认设备。'
@@ -45,20 +45,20 @@ zh-CN:
       enter_backup_code_text: 请从您的代码列表中输入有效的备份代码，以防您无法再访问已注册的 2FA 设备。
       other_device: '使用其他设备或备份代码'
     settings:
-      title: '2FA settings'
-      current_configuration: 'Current configuration'
-      label_active_strategies: 'Active 2FA strategies'
-      label_enforced: 'Enforce 2FA'
-      label_remember: 'Remember 2FA login'
+      title: '双重身份验证设置'
+      current_configuration: '当前配置'
+      label_active_strategies: '激活双重身份验证策略'
+      label_enforced: '强制双重身份验证'
+      label_remember: '记住双重身份验证登录信息'
       text_configuration: |
-        Note: These values represent the current application-wide configuration. You cannot disable settings enforced by the configuration or change the current active strategies, since they require a server restart.
-      text_configuration_guide: For more information, check the configuration guide.
-      text_enforced: 'Enable this setting to force all users to register a 2FA device on their next login. Can only be disabled when not enforced by configuration.'
+        注释：这些值表示当前应用级配置。您无法禁用由配置强制的设置或更改当前的有效策略，因为它们需要重启服务器。
+      text_configuration_guide: 如需了解更多信息，请参阅配置指南。
+      text_enforced: '启用此设置将强制所有用户在他们下一次登录时注册双重身份验证设备。只能在未由配置强制时禁用。'
       text_remember: |
-        Set this to greater than zero to allow users to remember their 2FA authentication for the given number of days.
-        They will not be requested to re-enter it during that period. Can only be set when not enforced by configuration.
-      error_invalid_settings: 'The 2FA strategies you selected are invalid'
-      failed_to_save_settings: 'Failed to update 2FA settings: %{message}'
+        将此设为大于零可以让用户将其双重身份验证记住给定天数。
+        在此期间，系统将不再请求他们重新输入。只能在未由配置强制时设置。
+      error_invalid_settings: '您选择的双重身份验证策略无效'
+      failed_to_save_settings: '无法更新双重身份验证设置：%{message}'
     admin:
       self_edit_path: '要添加或修改您自己的 2FA 设备，请转到 %{self_edit_link}'
       self_edit_link_name: '您帐户页面上的双重身份验证'
@@ -71,8 +71,8 @@ zh-CN:
       text_2fa_enabled: '每次登录时，系统将要求此用户从默认的 2FA 设备输入 OTP 令牌。'
       text_2fa_disabled: "用户未通过“我的帐户页面”设置过 2FA 设备"
     upsale:
-      title: 'Two-factor authentication is an enterprise feature'
-      description: 'Strenghten your internal or external authentication mechanisms with a second factor.'
+      title: '双重身份验证是企业版功能'
+      description: '使用双重身份验证强化您的内部或外部验证机制。'
     backup_codes:
       none_found: 此帐户不存在备份代码。
       singular: 备份代码
@@ -101,7 +101,7 @@ zh-CN:
       registration_failed_update: '2FA 设备注册失败，令牌有效，但设备无法更新。'
       confirm_send_failed: '确认您的 2FA 设备失败。'
       button_complete_registration: '完成 2FA 注册'
-      text_confirm_to_complete_html: "Please complete the registration of your device <strong>%{identifier}</strong> by entering a one-time password from your default device."
+      text_confirm_to_complete_html: "请从您的默认设备输入一次性密码，完成设备 <strong>%{identifier}</strong> 的注册。"
       text_confirm_to_change_default_html: "请从您的当前默认设备输入一次性密码，确认将您的默认设备更改为 <strong>%{new_identifier}</strong>。"
       text_identifier: '您可以使用此字段为设备提供自定义标识符。'
       failed_to_delete: '删除 2FA 设备失败。'
@@ -111,7 +111,7 @@ zh-CN:
       totp:
         title: '使用您的基于应用程序的身份验证器'
         provisioning_uri: '配置 URI'
-        secret_key: 'Secret key'
+        secret_key: '密钥'
         time_based: '基于时间'
         account: '帐户名/颁发者'
         setup: |
@@ -133,8 +133,8 @@ zh-CN:
     sns:
       delivery_failed: 'SNS 传送失败：'
     message_bird:
-      sms_delivery_failed: 'MessageBird SMS delivery failed.'
-      voice_delivery_failed: 'MessageBird voice call failed.'
+      sms_delivery_failed: 'MessageBird 短信发送失败。'
+      voice_delivery_failed: 'MessageBird 语音呼叫失败。'
     restdt:
       delivery_failed_with_code: '令牌传送失败。（错误代码 %{code}）'
     strategies:
@@ -147,11 +147,11 @@ zh-CN:
       required_to_add_device: '活动安全策略要求您启用双重身份验证。请使用以下表单注册设备。'
     remember:
       active_session_notice: >
-        Your account has an active remember cookie valid until %{expires_on}. This cookie allows you to log in without a second factor to your account until that time.
-      label: 'Remember'
-      clear_cookie: 'Click here to remove this cookie'
-      cookie_removed: 'The remember cookie has been removed.'
-      dont_ask_again: "Create cookie to remember 2FA authentication on this client for %{days} days."
+        您的帐户具有一个有效期截至%{expires_on}的记住 Cookie。借助此 Cookie，在此之前无需使用双重身份即可登录帐户。
+      label: '记住'
+      clear_cookie: '单击此处可以移除此 Cookie'
+      cookie_removed: '记住的 Cookie 已被移除。'
+      dont_ask_again: "创建 Cookie，在此客户端上记住双重身份验证 %{days} 天。"
   field_phone: "手机"
   field_otp: "一次性密码"
   notice_account_otp_invalid: "一次性密码无效。"
@@ -164,7 +164,7 @@ zh-CN:
   label_confirmed: '已确认'
   button_continue: '继续'
   button_make_default: '标记为默认'
-  label_unverified_phone: "Cell phone not yet verified"
+  label_unverified_phone: "手机尚未验证"
   notice_phone_number_format: "请按以下格式输入号码：+XX XXXXXXXX。"
   text_otp_not_receive: "其他验证方法"
   text_send_otp_again: "通过下列方式重新发送一次性密码："

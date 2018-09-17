@@ -36,7 +36,7 @@ ko:
     label_2fa_enabled: '2단계 인증이 활성화되었습니다.'
     label_2fa_disabled: '2단계 인증이 활성화되지 않았습니다.'
     text_otp_delivery_message_sms: "%{app_title}의 일회용 암호는 %{token}입니다."
-    text_otp_delivery_message_voice: "Your %{app_title} one-time password is: %{pause} %{token}. %{pause} I repeat: %{pause} %{token}"
+    text_otp_delivery_message_voice: "%{app_title} 일회용 암호: %{pause} %{token}. %{pause} 반복: %{pause} %{token}"
     text_enter_2fa: '장치에서 일회용 암호를 입력하세요.'
     text_2fa_enabled: '로그인할 때마다 기본 2FA 장치에서 OTP 토큰을 입력하라는 메시지가 표시됩니다.'
     text_2fa_disabled: '2단계 인증을 활성화하려면 위의 버튼을 사용하여 새로운 2FA 장치를 등록하세요. 장치가 이미 있는 경우 이 장치를 기본값으로 만들어야 합니다.'
@@ -45,20 +45,20 @@ ko:
       enter_backup_code_text: 등록된 2FA 장치에 더 이상 액세스할 수 없는 경우 코드 목록에서 유효한 백업 코드를 입력하세요.
       other_device: '다른 장치 또는 백업 코드 사용'
     settings:
-      title: '2FA settings'
-      current_configuration: 'Current configuration'
-      label_active_strategies: 'Active 2FA strategies'
-      label_enforced: 'Enforce 2FA'
-      label_remember: 'Remember 2FA login'
+      title: '2FA 설정'
+      current_configuration: '현재 구성'
+      label_active_strategies: '활성 2FA 전략'
+      label_enforced: '2FA 강제 적용'
+      label_remember: '2FA 로그인 유지'
       text_configuration: |
-        Note: These values represent the current application-wide configuration. You cannot disable settings enforced by the configuration or change the current active strategies, since they require a server restart.
-      text_configuration_guide: For more information, check the configuration guide.
-      text_enforced: 'Enable this setting to force all users to register a 2FA device on their next login. Can only be disabled when not enforced by configuration.'
+        참고: 해당 값은 현재 애플리케이션 차원 구성을 나타냅니다. 서버 다시 시작이 필요하기 때문에, 구성에 의해 강제 적용되는 설정을 비활성화하거나 현재 활성 전략을 변경할 수 없습니다.
+      text_configuration_guide: 자세한 내용은 구성 가이드를 확인하세요.
+      text_enforced: '모든 사용자가 다음 로그인 시 2FA 장치를 등록하도록 하려면 이 설정을 활성화하세요. 구성에 의해 강제 적용되지 않는 경우에만 비활성화할 수 있습니다.'
       text_remember: |
-        Set this to greater than zero to allow users to remember their 2FA authentication for the given number of days.
-        They will not be requested to re-enter it during that period. Can only be set when not enforced by configuration.
-      error_invalid_settings: 'The 2FA strategies you selected are invalid'
-      failed_to_save_settings: 'Failed to update 2FA settings: %{message}'
+        사용자가 지정된 기간(일) 동안 2FA 인증을 저장할 수 있게 하려면 이 값을 0보다 크게 설정하세요.
+        사용자가 해당 기간 동안에는 이를 다시 입력하라는 요청을 받지 않게 됩니다. 구성에 의해 강제 적용되지 않는 경우에만 설정할 수 있습니다.
+      error_invalid_settings: '선택한 2FA 전략은 유효하지 않습니다.'
+      failed_to_save_settings: '2FA 설정을 업데이트하지 못함: %{message}'
     admin:
       self_edit_path: '고유한 2FA 장치를 추가하거나 수정하려면 %{self_edit_link}(으)로 이동하세요.'
       self_edit_link_name: '계정 페이지의 2단계 인증'
@@ -71,8 +71,8 @@ ko:
       text_2fa_enabled: '로그인할 때마다 기본 2FA 장치에서 OTP 토큰을 입력하라는 메시지가 이 사용자에게 표시됩니다.'
       text_2fa_disabled: "사용자가 '내 계정 페이지'에서 2FA 장치를 설정하지 않았습니다."
     upsale:
-      title: 'Two-factor authentication is an enterprise feature'
-      description: 'Strenghten your internal or external authentication mechanisms with a second factor.'
+      title: '2단계 인증은 엔터프라이즈 기능입니다.'
+      description: '2단계로 내부 또는 외부 인증 메커니즘을 강화하세요.'
     backup_codes:
       none_found: 이 계정에 대한 백업 코드가 존재하지 않습니다.
       singular: 백업 코드
@@ -101,7 +101,7 @@ ko:
       registration_failed_update: '2FA 장치 등록 실패, 토큰이 유효하지만 장치를 업데이트할 수 없습니다.'
       confirm_send_failed: '2FA 장치 확인에 실패했습니다.'
       button_complete_registration: '2FA 등록 완료'
-      text_confirm_to_complete_html: "Please complete the registration of your device <strong>%{identifier}</strong> by entering a one-time password from your default device."
+      text_confirm_to_complete_html: "기본 장치에서 일회용 암호를 입력하여 장치 <strong>%{identifier}</strong> 등록을 완료하세요."
       text_confirm_to_change_default_html: "현재 기본 장치에서 일회용 암호를 입력하여 기본 장치를 <strong>%{new_identifier}</strong>(으)로 변경을 확인하세요."
       text_identifier: '이 필드를 사용하여 사용자 지정 식별자를 장치에 지정할 수 있습니다.'
       failed_to_delete: '2FA 장치를 삭제하지 못했습니다.'
@@ -111,7 +111,7 @@ ko:
       totp:
         title: '앱 기반 인증자 사용'
         provisioning_uri: '프로비저닝 URI'
-        secret_key: 'Secret key'
+        secret_key: '비밀 키'
         time_based: '시간 기반'
         account: '계정 이름/발급자'
         setup: |
@@ -133,8 +133,8 @@ ko:
     sns:
       delivery_failed: 'SNS 배달 실패:'
     message_bird:
-      sms_delivery_failed: 'MessageBird SMS delivery failed.'
-      voice_delivery_failed: 'MessageBird voice call failed.'
+      sms_delivery_failed: 'MessageBird SMS 배달이 실패했습니다.'
+      voice_delivery_failed: 'MessageBird 음성 통화가 실패했습니다.'
     restdt:
       delivery_failed_with_code: '토큰 배달이 실패했습니다(오류 코드 %{code}).'
     strategies:
@@ -147,11 +147,11 @@ ko:
       required_to_add_device: '활성 보안 정책에서는 2단계 인증을 사용하도록 요구합니다. 다음 양식을 사용하여 장치를 등록하세요.'
     remember:
       active_session_notice: >
-        Your account has an active remember cookie valid until %{expires_on}. This cookie allows you to log in without a second factor to your account until that time.
-      label: 'Remember'
-      clear_cookie: 'Click here to remove this cookie'
-      cookie_removed: 'The remember cookie has been removed.'
-      dont_ask_again: "Create cookie to remember 2FA authentication on this client for %{days} days."
+        사용자 계정에는 %{expires_on}까지 유효한 활성 저장 쿠키가 있습니다. 이 쿠키를 사용하면 그때까지 사용자 계정에 2단계 없이 로그인할 수 있습니다.
+      label: '저장'
+      clear_cookie: '이 쿠키를 제거하려면 여기를 클릭하세요.'
+      cookie_removed: '저장 쿠키가 제거되었습니다.'
+      dont_ask_again: "%{days}일간 이 클라이언트에서 2FA 인증을 저장하는 쿠키를 만듭니다."
   field_phone: "휴대폰"
   field_otp: "일회용 암호"
   notice_account_otp_invalid: "일회용 암호가 잘못되었습니다 ."
@@ -164,7 +164,7 @@ ko:
   label_confirmed: '확인됨'
   button_continue: '계속'
   button_make_default: '기본값으로 표시'
-  label_unverified_phone: "Cell phone not yet verified"
+  label_unverified_phone: "아직 인증되지 않은 휴대폰"
   notice_phone_number_format: "다음과 같은 형식으로 번호를 입력하세요: + XX XXXXXXXX."
   text_otp_not_receive: "기타 확인 방법"
   text_send_otp_again: "다음으로 일회용 암호 다시 보내기:"
