@@ -35,8 +35,8 @@ es:
     label_one_time_password: 'Contraseña de un solo uso'
     label_2fa_enabled: 'Autenticación de dos factores está activa'
     label_2fa_disabled: 'Autenticación de dos factores no está activa'
-    text_otp_delivery_message_sms: "Your %{app_title} one-time password is %{token}"
-    text_otp_delivery_message_voice: "Your %{app_title} one-time password is: %{pause} %{token}. %{pause} I repeat: %{pause} %{token}"
+    text_otp_delivery_message_sms: "Su contraseña de un solo uso de %{app_title} es %{token}"
+    text_otp_delivery_message_voice: "Su contraseña de un solo uso de %{app_title} es: %{pause} %{token}. %{pause} Repito: %{pause} %{token}"
     text_enter_2fa: 'Ingrese la contraseña de un solo uso desde su dispositivo.'
     text_2fa_enabled: 'Después de cada inicio de sesión, se le solicitará que ingrese un token OTP desde su dispositivo 2FA predeterminado.'
     text_2fa_disabled: 'Para habilitar la autenticación de dos factores, use el botón de arriba para registrar un nuevo dispositivo 2FA. Si ya tiene un dispositivo, debe hacerlo de manera predeterminada.'
@@ -133,8 +133,8 @@ es:
     sns:
       delivery_failed: 'La entrega de SNS falló:'
     message_bird:
-      sms_delivery_failed: 'MessageBird SMS delivery failed.'
-      voice_delivery_failed: 'MessageBird voice call failed.'
+      sms_delivery_failed: 'Error al entregar el mensaje SMS de MessageBird.'
+      voice_delivery_failed: 'Error de llamada de voz de MessageBird.'
     restdt:
       delivery_failed_with_code: 'La entrega del token falló. (Código de error %{code})'
     strategies:
